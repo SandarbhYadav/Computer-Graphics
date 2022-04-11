@@ -1,0 +1,14 @@
+in = imread('baby.jpg');
+i = rgb2hsv(i);
+subplot(2,2,1);
+imshow(in);
+title('Original Image');
+subplot(2,2,2);
+imshow(i(:,:,1));
+title('Hue Component');
+subplot(2,2,3);
+imshow(i(:,:,2));
+title('Saturation Component');
+subplot(2,2,4);
+imshow(i(:,:,3));
+title('Value Component');

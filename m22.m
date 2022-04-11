@@ -1,0 +1,16 @@
+az1= imread('mypic.jpg'); 
+bz1 = imread('baby.jpg'); 
+r=az1(:,:,1);
+g=az1(:,:,2);
+b=az1(:,:,3);
+r2=bz1(:,:,1);
+g2=bz1(:,:,2);
+b2=bz1(:,:,3);
+nr2 = histeq(r2,imhist(r));
+ng2 = histeq(g2,imhist(g));
+nb2 = histeq(b2,imhist(b));
+nbz1(:,:,1)=nr2;
+nbz1(:,:,2)=ng2;
+nbz1(:,:,3)=nb2;
+c3=[az1 nbz1];
+figure, imshow(c3);
